@@ -2,21 +2,32 @@
   "name": "jihyo_note_web",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "devDependencies": {
     "@types/jest": "24.0.18",
-    "@types/node": "12.7.4",
+    "prettier": "^1.18.2",
+    "react-scripts": "3.1.1",
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0"
+  },
+  "dependencies": {
+    "@types/immutable": "^3.8.7",
+    "@types/jest": "24.0.18",
+    "@types/lodash": "^4.14.137",
+    "@types/node": "12.7.2",
     "@types/react": "16.9.2",
     "@types/react-dom": "16.9.0",
+    "@types/uuid": "^3.4.5",
+    "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
     "typescript": "3.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "aws s3 sync ./build s3://jihyo-note-web --profile=developer"
   },
   "eslintConfig": {
     "extends": "react-app"
