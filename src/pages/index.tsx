@@ -1,17 +1,9 @@
 import React from "react";
-import Head from "next/head";
 
 const HomePage: React.FC = () => {
-
+  console.log('Dependabot alerts')
   return (
-    <>
-      <Head>
-        <title>jihyo note</title>
-      </Head>
-      <div>
-          test
-      </div>
-    </>
+      <div>jihyo</div>
   );
 };
 

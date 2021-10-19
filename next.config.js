@@ -2,7 +2,6 @@ const withPWA = require("next-pwa");
 const withFonts = require("next-fonts");
 const withImages = require("next-images");
 const withPlugins = require("next-compose-plugins");
-const i18n = require("./next-i18next.config");
 
 module.exports = withPlugins(
   [withPWA, withFonts, withImages],
@@ -23,6 +22,5 @@ module.exports = withPlugins(
       disable: process.env.NODE_ENV !== "production",
     },
     webpack5: false,
-    ...i18n,
   }
 );

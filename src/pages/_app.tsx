@@ -1,5 +1,4 @@
 import {AppProps} from "next/app";
-import {appWithTranslation} from "next-i18next";
 import {createGlobalStyle} from "styled-components";
 import {SWRConfig} from "swr";
 import React from "react";
@@ -27,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
     }   
 `;
 
-const App = ({  }: AppProps) => {
+export default function App({ Component, pageProps }: AppProps): JSX.Element {
 
   return (
     <>
@@ -45,8 +44,8 @@ const App = ({  }: AppProps) => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, maximum-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
+          <Component {...pageProps} />
       </SWRConfig>
     </>
   );
 };
-export default appWithTranslation(App);
