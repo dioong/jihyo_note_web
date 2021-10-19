@@ -1,25 +1,78 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "preserve",
     "lib": [
       "dom",
-      "dom.iterable",
-      "esnext"
+      "es2020"
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "esnext",
     "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react"
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@util/*": [
+        "./src/util/*"
+      ],
+      "@type/*": [
+        "./src/type/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@mock/*": [
+        "./src/mock/*"
+      ],
+      "@theme/*": [
+        "./src/theme/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@context/*": [
+        "./src/context/*"
+      ],
+      "@styles/*": [
+        "./src/styles/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "typescript-styled-plugin",
+        "lint": {
+          "validProperties": [
+            "dominant-baseline",
+            "r"
+          ]
+        }
+      }
+    ],
+    "allowJs": true
   },
+  "exclude": [
+    "node_modules"
+  ],
   "include": [
-    "src"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }
