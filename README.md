@@ -1,8 +1,8 @@
 # Jihyo note
 
 # tech stack
-## nextjs
-## ecs
+ -  nextjs
+ -  ecs
 
 ```shell
 # Run Dev Server
