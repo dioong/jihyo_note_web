@@ -1,9 +1,9 @@
-import {AppProps} from "next/app";
-import {createGlobalStyle} from "styled-components";
-import {SWRConfig} from "swr";
+import { AppProps } from "next/app";
+import { createGlobalStyle } from "styled-components";
+import { SWRConfig } from "swr";
 import React from "react";
 import Head from "next/head";
-import {APP_NAME} from "../configs/app.constant";
+import { APP_NAME } from "../configs/app.constant";
 
 const GlobalStyle = createGlobalStyle`
     html, body, #__next {
@@ -27,7 +27,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
-
   return (
     <>
       <Head>
@@ -44,8 +43,8 @@ export default function App({ Component, pageProps }: AppProps): JSX.Element {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, maximum-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
         />
-          <Component {...pageProps} />
+        <Component {...pageProps} />
       </SWRConfig>
     </>
   );
-};
+}
