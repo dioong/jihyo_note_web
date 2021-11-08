@@ -63,22 +63,18 @@ export default class Document extends NextDocument {
           />
           <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
           <meta name="twitter:card" content="summary" />
-          <meta name="twitter:url" content="https://kda.ai" />
+          <meta name="twitter:url" content="http://dioong.com" />
           <meta name="twitter:title" content={APP_NAME} />
           <meta name="twitter:description" content={APP_DESCRIPTION} />
-          <meta
-            name="twitter:image"
-            content="https://kda.ai/icons/icon-192x192.png"
-          />
           <meta name="twitter:creator" content="@yourgg_official" />
           <meta property="og:type" content="website" />
           <meta property="og:title" content={APP_NAME} />
           <meta property="og:description" content={APP_DESCRIPTION} />
           <meta property="og:site_name" content={APP_NAME} />
-          <meta property="og:url" content="https://kda.ai" />
+          <meta property="og:url" content="https://dioong.com" />
           <meta
             property="og:image"
-            content="https://kda.ai/icons/icon-192x192.png"
+            content="https://dioong.com/icons/icon-192x192.png"
           />
           <link
             rel="apple-touch-startup-image"
