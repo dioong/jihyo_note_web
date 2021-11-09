@@ -60,7 +60,6 @@ jobs:
       - name: Deploy to Dev
         timeout-minutes: 30
         env:
-          NGINX_IMAGE: ${{ steps.login-ecr.outputs.registry }}/jihyo-note:dev-nginx-${{ github.sha }}
           WEB_IMAGE: ${{ steps.login-ecr.outputs.registry }}/jihyo-note:dev-web-${{ github.sha }}
           ENVIRONMENT: dev
           AWS_REGION: ap-northeast-1
