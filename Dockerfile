@@ -14,7 +14,6 @@ COPY next.config.js ./
 COPY node_modules ./node_modules
 COPY package.json ./package.json
 COPY public ./public
-COPY locales ./locales
 
 USER nextjs
 

@@ -11,8 +11,7 @@
     "test": "jest",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix --plugin tsc --rule 'tsc/config: [2, {configFile: \"./tsconfig.json\"}]'",
-    "generate:ts": "node scripts/generateTypes",
-    "updateLocales": "node scripts/localeSheetToJsonFiles"
+    "generate:ts": "node scripts/generateTypes"
   },
   "dependencies": {
     "@react-navigation/native": "5.9.4",
