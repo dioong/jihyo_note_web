@@ -17,4 +17,4 @@ jobs:
           context-name: conventional-pr-title
           preset: conventional-changelog-angular@latest
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUB_TOKEN: ${{ secrets.HUB_TOKEN }}

@@ -1,0 +1,14 @@
+version: 1
+task_definition:
+  ecs_network_mode: awsvpc
+  task_execution_role: arn:aws:iam::047844631354:role/AmazonECSTaskExecutionRole
+  task_size:
+    cpu_limit: 1024
+    mem_limit: 1948
+run_params:
+  network_configuration:
+    awsvpc_configuration:
+      subnets:
+        - subnet-0deed27cef55316b0
+      security_groups:
+        - sg-064eaecdc828561b5
