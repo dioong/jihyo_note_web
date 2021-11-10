@@ -16,6 +16,6 @@ COPY public ./public
 
 USER nextjs
 
-EXPOSE 3000
+EXPOSE 80
 
 CMD ["yarn", "start"]
