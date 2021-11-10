@@ -11,6 +11,6 @@ services:
       driver: awslogs
       options:
         awslogs-create-group: "true"
-        awslogs-group: /aws/ecs/kda-ai/web/${ENVIRONMENT}/node
+        awslogs-group: /aws/ecs/jihyo-note/web/${ENVIRONMENT}/node
         awslogs-region: ap-northeast-1
-        awslogs-stream-prefix: kda-ai-web-node
+        awslogs-stream-prefix: jihyo-note-web-node
