@@ -2,9 +2,12 @@ version: 1
 task_definition:
   ecs_network_mode: awsvpc
   task_execution_role: arn:aws:iam::387125961759:role/AmazonECSTaskExecutionRole
+  ContainerPort: 3000
+  HostPort: 80
+  Protocol: tcp
   task_size:
-    cpu_limit: 1024
-    mem_limit: 1948
+    cpu_limit: 512
+    mem_limit: 512
 run_params:
   network_configuration:
     awsvpc_configuration:
