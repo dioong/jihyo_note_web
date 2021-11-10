@@ -57,36 +57,4 @@ jobs:
       - uses: marocchino/setup-ecs-cli@v1
         with:
           version: v1.21.0
-      - name: Deploy to Dev
-        timeout-minutes: 30
-        env:
-          WEB_IMAGE: ${{ steps.login-ecr.outputs.registry }}/jihyo-note:dev-web-${{ github.sha }}
-          ENVIRONMENT: dev
-          AWS_REGION: ap-northeast-1
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        working-directory: deploy
-        run: |
-          ecs-cli compose \
-            --cluster jihyoNote \
-            --project-name jihyo-note-dev \
-            --file docker-compose.ecs.yml \
-            service up \
-            --force-deployment \
-            --timeout 30
-      - name: Update deployment status (success)
-        if: success()
-        uses: chrnorm/deployment-status@releases/v1
-        with:
-          token: ${{ secrets.HUB_TOKEN }}
-          target_url: http://dev.dioong.com
-          state: success
-          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
-      - name: Update deployment status (failure)
-        if: failure() || cancelled()
-        uses: chrnorm/deployment-status@releases/v1
-        with:
-          token: ${{ secrets.HUB_TOKEN }}
-          target_url: http://dev.dioong.com
-          state: failure
-          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+      
