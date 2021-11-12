@@ -68,7 +68,7 @@ jobs:
         working-directory: deploy
         run: |
           ecs-cli compose \
-            --cluster jihyo-note-cluster \
+            --cluster jihyo-note \
             --project-name jihyo-note-dev \
             --file docker-compose.ecs.yml \
             service up \
