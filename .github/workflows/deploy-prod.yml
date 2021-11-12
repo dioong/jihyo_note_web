@@ -64,8 +64,7 @@ jobs:
           version: v1.21.0
       - name: Deploy to Prod
         timeout-minutes: 30
-        env:
-          NGINX_IMAGE: ${{ steps.login-ecr.outputs.registry }}/lckdata-ai:nginx-${{ github.sha }}
+        env:          
           NODE_IMAGE: ${{ steps.login-ecr.outputs.registry }}/lckdata-ai:web-${{ github.sha }}
           ENVIRONMENT: prod
           AWS_REGION: ap-northeast-1

@@ -6,7 +6,7 @@ task_definition:
   HostPort: 80
   Protocol: tcp
   task_size:
-    cpu_limit: 512
+    cpu_limit: 1
     mem_limit: 512
 run_params:
   network_configuration:
