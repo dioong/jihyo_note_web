@@ -5,9 +5,9 @@ task_definition:
   ContainerPort: 3000
   HostPort: 80
   Protocol: tcp
-  task_size:
-    cpu_limit: 1
-    mem_limit: 512
+  task_size:    
+    cpu_limit: 1024
+    mem_limit: 1024
 run_params:
   network_configuration:
     awsvpc_configuration:
