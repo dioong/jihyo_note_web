@@ -6,7 +6,7 @@ services:
     environment:
       - ENVIRONMENT=${ENVIRONMENT}
     ports:
-      - "3000:3000"
+      - "3000:80"
     logging:
       driver: awslogs
       options:
