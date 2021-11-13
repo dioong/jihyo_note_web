@@ -1,6 +1,5 @@
 version: 1
-task_definition:
-  ecs_network_mode: awsvpc
+task_definition:  
   task_execution_role: arn:aws:iam::387125961759:role/ecsTaskExecutionRole
   ContainerPort: 3000
   HostPort: 80
