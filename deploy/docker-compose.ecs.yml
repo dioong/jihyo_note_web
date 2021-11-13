@@ -2,7 +2,7 @@ version: "3"
 
 services:
   node:
-    image: 387125961759.dkr.ecr.ap-northeast-1.amazonaws.com/jihyo-note-ecr:dev-web-67bdcdf50035d7f72e72886d47f6a8842148ab9b
+    image: ${NODE_IMAGE}
     environment:
       - ENVIRONMENT=${ENVIRONMENT}
     ports:
