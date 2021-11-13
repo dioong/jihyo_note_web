@@ -1,5 +1,6 @@
 version: 1
-task_definition:  
+task_definition:
+  ecs_network_mode: awsvpc
   task_execution_role: arn:aws:iam::387125961759:role/ecsTaskExecutionRole
   ContainerPort: 3000
   HostPort: 80
@@ -7,3 +8,10 @@ task_definition:
   task_size:    
     cpu_limit: 512
     mem_limit: 1024
+run_params:
+  network_configuration:
+    awsvpc_configuration:
+      subnets:
+        - subnet-21587a7a
+      security_groups:
+        - sg-1ff48261
