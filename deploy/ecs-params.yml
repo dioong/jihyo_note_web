@@ -7,10 +7,3 @@ task_definition:
   task_size:    
     cpu_limit: 512
     mem_limit: 1024
-run_params:
-  network_configuration:
-    awsvpc_configuration:
-      subnets:
-        - subnet-26e41f0d
-      security_groups:
-        - sg-1ff48261
